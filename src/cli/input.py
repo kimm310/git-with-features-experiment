@@ -13,7 +13,8 @@ def get_number_from_input(message:str = "Enter a number: ") -> int:
 def cli_main():
     print("Welcome to the CLI Calculator")
 
+    operation = get_operation_from_user()
     a = get_number_from_input("Enter the first number: ")
     b = get_number_from_input("Enter the second number: ")
-    operation = get_operation_from_user()
+    #operation = get_operation_from_user()
     print(f"The result of {operation.name} with {a} and {b} is {operation.func(a, b)}") 
