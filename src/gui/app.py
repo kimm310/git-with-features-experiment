@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 from src.calculator.basic import add, subtract
+from src.calculator.scientific import power
 from src.calculator.utils import validate_number
 
 class CalculatorGUI:
@@ -28,6 +29,7 @@ class CalculatorGUI:
         operations = [
             ("Add", self.handle_add),
             ("Subtract", self.handle_subtract),
+            ("Power", self.handle_power),
             ("Show History", self.show_history),
         ]
 
@@ -57,6 +59,11 @@ class CalculatorGUI:
         a, b = self.get_inputs()
         if a is not None:
             self.display_result(subtract(a, b))
+
+    def handle_power(self):
+        a, b = self.get_inputs()
+        if a is not None:
+            self.display_result(modulo(a, b))
     
     def show_history(self):
         history = get_history()
