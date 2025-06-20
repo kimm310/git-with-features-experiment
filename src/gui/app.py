@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 from src.calculator.basic import add, subtract
+from src.calculator.memory import get_history, save_result
 from src.calculator.scientific import power, log
 from src.calculator.utils import validate_number
 
