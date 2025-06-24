@@ -21,9 +21,9 @@
     Ensure that versions are displayed to confirm proper installation.
 
 
-2. **Clone the Repository (if not done already)**
+2. **Clone the Repository**
     ```cmd
-   git clone git@github.com:tabeatheunicorn/git-with-features-experiment.git
+   git clone https://github.com/kimm310/git-with-features-experiment.git
     ```
 
 
@@ -33,17 +33,14 @@
     ```
    Running the script will not be required during the experiment, but it can help you understand the project's functionality.
 
-## 2. Setting up the Tool (upload on pipIndex?)
+## 2. Setting up the Tool
 
-1. **Download the [git_tool] put google drive link here**
-
-
-2. **Install the Tool**
+1. **Install the Tool**
     ```cmd
-   python -m pip install <prefix>/git_tool-<version>-py3-none-any.whl
+   python -m pip install dist/git_tool-1.0.11-py3-none-any.whl
     ```
    
-3. **Test the Installation**
+2. **Test the Installation**
    - **Display Feature Commands**
 
       Run the following command to see all available feature commands:
@@ -55,7 +52,7 @@
      Branch feature-metadata successfully created.
      ```
 
-4. **Set Up Git Hooks**
+3. **Set Up Git Hooks**
 
    The hooks are required to ensure that feature information is added before committing files. This step can be skipped 
    if you plan to add feature information only to existing commits using the `git feature commit` command, bypassing the 
