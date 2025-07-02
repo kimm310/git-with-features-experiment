@@ -41,27 +41,26 @@
     ```
    
 2. **Test the Installation**
-   - **Display Feature Commands**
 
-      Run the following command to see all available feature commands:
+      Run the following command to display all available feature commands:
      ```cmd
-     python -m src.main
+     git feature
      ```
-      You should see an output similar to:
+      You should be able to see an output similar to:
      ```cmd
-     Branch feature-metadata successfully created.
+     Branch feature-metadata created locally from origin.
      ```
 
 3. **Set Up Git Hooks**
 
    The hooks are required to ensure that feature information is added before committing files. This step can be skipped 
    if you plan to add feature information only to existing commits using the `git feature commit` command, bypassing the 
-   need for `git feature add` and its subcommands. Information about the subcommands can be found [here]().
+   need for `git feature add` and its subcommands.
    - **Find the Tool Path**
    
      This will output a path ending with `__init__.py`
      ```cmd
-     python -c "import git_tool; print(git_tool.__file)"
+     python -c "import git_tool; print(git_tool.__file__)"
      ```
    - **Locate the Hooks Directory**
    
@@ -70,6 +69,7 @@
      C:\Users\YourName\AppData\Local\Programs\Python\Python39\Lib\site-packages\git_tool\hooks
      ```
    - **Set the Hooks Path**
+   
      Replace `<path>` with the path you found in the previous step.
      ```cmd
      git config core.hooksPath <path>
